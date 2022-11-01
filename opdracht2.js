@@ -37,6 +37,10 @@ function countStock(item) {
 
 console.log({ totalBoughtTvs });
 
-// Opdracht 2b: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
+// Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 console.log("Opdracht 2d: is zichtbaar op de rendered pagina");
 document.getElementById("stock-tvs").innerHTML = ` ${totalBoughtTvs} `;
+
+//     Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
+const totalToBeSold = totalBoughtTvs - totalSoldTvs;
+document.getElementById("tobe-sold").innerHTML = ` ${totalToBeSold} `;
