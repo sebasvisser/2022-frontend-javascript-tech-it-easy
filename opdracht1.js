@@ -7,22 +7,23 @@
 
 console.log("opdracht 1a");
 const tvTypes = inventory.map((tv) =>  tv.type);
-console.log(tvTypes);
+console.log({tvTypes});
 
 console.log("opdracht 1b");
 const tvSoldOut = inventory.filter((tv) =>
    tv.sold === tv.originalStock);
-console.log(tvSoldOut);
+console.log({tvSoldOut});
 
 console.log("opdracht 1c");
 const tvAmbiLight = inventory.filter((tv) => {
     return tv.options.ambiLight === true;
 });
-console.log(tvAmbiLight);
+console.log({tvAmbiLight});
 
 console.log("Opdracht 1d");
 function sortLowToHigh(inventory){
-    return inventory.sort();
-
+    return inventory.sort((a, b) => a.price - b.price);
 };
-console.log(sortLowToHigh(inventory))
+console.log(sortLowToHigh(inventory));
+
+
