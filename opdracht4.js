@@ -39,4 +39,6 @@ function showTvScreenSizes() {
 //     Philips 43PUS6504/12 - 4K TV
 // €379,-
 //     43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm)
+// dat is index[4]
+
 // Opdracht 4e: Maak een herbruikbare functie die de informatie van alle tv's weergeeft op de pagina. Gebruik hiervoor de map-methode in combinatie met de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
