@@ -7,7 +7,8 @@ function showTvName(i) {
 }
 
 //     Opdracht 4b: Maak een herbruikbare functie die de prijs van één tv als parameter verwacht (zoals 379 of 159) teruggeeft in het format €379,- of €159,-.
-function displayPrice(price) {
+function showPrice(i) {
+  const price = inventory[i].price;
   return "€" + price + ",-";
 }
 
@@ -37,4 +38,28 @@ function showTvScreenSizes(i) {
 //     43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm)
 // dat is index[4]
 
+document.getElementById("tv-4d").innerHTML = `
+  <p>
+      ${showTvName(4)} <br />
+      ${showPrice(4)} <br />
+      ${showTvScreenSizes(4)}
+  </p>
+`;
+
 // Opdracht 4e: Maak een herbruikbare functie die de informatie van alle tv's weergeeft op de pagina. Gebruik hiervoor de map-methode in combinatie met de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
+
+function createTvListing(index) {
+  `
+  <p>
+      ${showTvName(index)} <br />
+      ${showPrice(index)} <br />
+      ${showTvScreenSizes(index)}
+  </p>
+`;
+}
+
+function showTVListings(inventory) {
+  const listItem = document.getElementById("4etv-lists");
+}
+
+showTVListings(inventory);
