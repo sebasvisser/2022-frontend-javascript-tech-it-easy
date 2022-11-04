@@ -60,6 +60,15 @@ function createTvListing(index) {
 
 function showTVListings(inventory) {
   const listItem = document.getElementById("4etv-lists");
+  inventory.map((tv) => {
+    return (listItem.innerHTML += `
+  <p>
+      ${showTvName(tv.index)} <br />
+      ${showPrice(tv.index)} <br />
+      ${showTvScreenSizes(tv.index)}
+  </p>
+    `);
+  });
 }
 
 showTVListings(inventory);
