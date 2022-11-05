@@ -48,24 +48,15 @@ document.getElementById("tv-4d").innerHTML = `
 
 // Opdracht 4e: Maak een herbruikbare functie die de informatie van alle tv's weergeeft op de pagina. Gebruik hiervoor de map-methode in combinatie met de functies die je hebt gemaakt in opdracht 4a, 4b en 4c.
 
-function createTvListing(index) {
-  `
+function showTVListings(inventory) {
+  const listItem = document.getElementById("4etv-lists");
+  listItem.innerHTML = ``;
+  inventory.map((item, index) => {
+    return (listItem.innerHTML += `
   <p>
       ${showTvName(index)} <br />
       ${showPrice(index)} <br />
       ${showTvScreenSizes(index)}
-  </p>
-`;
-}
-
-function showTVListings(inventory) {
-  const listItem = document.getElementById("4etv-lists");
-  inventory.map((tv) => {
-    return (listItem.innerHTML += `
-  <p>
-      ${showTvName(tv.index)} <br />
-      ${showPrice(tv.index)} <br />
-      ${showTvScreenSizes(tv.index)}
   </p>
     `);
   });
